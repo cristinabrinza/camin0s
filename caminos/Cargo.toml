@@ -1,0 +1,26 @@
+[package]
+name = "caminos"
+version = "0.6.2"
+authors = ["Cristóbal Camarero <cristobal.camarero@unican.es>"]
+edition = "2018"
+description = "A modular interconnection network simulator."
+publish = true
+keywords = ["simulator"]
+documentation = "https://docs.rs/caminos"
+readme = "README.md"
+license = "MIT/Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+getopts = "0.2"
+rand = "0.8"
+backtrace-on-stack-overflow = "0.1"
+caminos-lib = "0.6.2"
+#caminos-lib = { path = "../caminos-lib" }
+
+# Using jemalloc seems to reduce a little execution times.
+# Although it also seems to increase a tiny bit the peak memory.
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+tikv-jemallocator = "0.5"
+
