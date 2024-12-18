@@ -443,6 +443,7 @@ pub fn new_routing(arg: RoutingBuilderArgument) -> Box<dyn Routing>
 			"ChannelMap" => Box::new(ChannelMap::new(arg)),
 			"Dragonfly2Colors" => Box::new(crate::topology::dragonfly::Dragonfly2ColorsRouting::new(arg)),
 			"UpDownDerouting" => Box::new(UpDownDerouting::new(arg)),
+			"UpDownDeroutingLazy" => Box::new(UpDownDeroutingLazy::new(arg)),
 			"MegaflyAD" => Box::new(MegaflyAD::new(arg)),
 			"AdaptiveStart" => Box::new(AdaptiveStart::new(arg)),
 			"DragonflyDirect" => Box::new(DragonflyDirect::new(arg)),

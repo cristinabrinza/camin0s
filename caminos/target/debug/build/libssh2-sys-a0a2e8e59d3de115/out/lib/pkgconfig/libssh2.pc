@@ -1,0 +1,17 @@
+###########################################################################
+# libssh2 installation details
+###########################################################################
+
+prefix=/home/brinzac/caminos/caminos/target/debug/build/libssh2-sys-a0a2e8e59d3de115/out
+exec_prefix=
+libdir=/home/brinzac/caminos/caminos/target/debug/build/libssh2-sys-a0a2e8e59d3de115/out/lib
+includedir=/home/brinzac/caminos/caminos/target/debug/build/libssh2-sys-a0a2e8e59d3de115/out/include
+
+Name: libssh2
+URL: https://www.libssh2.org/
+Description: Library for SSH-based communication
+Version: 1.10.1_DEV
+Requires.private: 
+Libs: -L${libdir} -lssh2 
+Libs.private: 
+Cflags: -I${includedir}
